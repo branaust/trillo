@@ -1,0 +1,35 @@
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    $primary-light,
+    $primary-dark
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.container {
+  //if viewport is less than 120px, we still occupy 100$ of viewport width
+  max-width: 120rem;
+  //center container in parent element (top+bottom, L+R)
+  margin: 8rem auto;
+  background-color: $grey-light-1;
+  box-shadow: $box-shadow-1;
+
+  min-height: 50rem;
+
+  @include respond(tab-land) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.content {
+  display: flex;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}

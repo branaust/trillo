@@ -1,0 +1,16 @@
+////////////////////////////
+////////// GALLERY //////////
+////////////////////////////
+.gallery {
+  //Display images side by side
+  display: flex;
+
+  &__photo {
+    // Define width/height in % so image is responsive
+    width: 100%;
+    height: auto;
+    // To avoid having a small space under img, which happens when left at inline-block;
+    display: block;
+    transition: all 0.1s;
+  }
+}
